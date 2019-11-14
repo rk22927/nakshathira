@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/** No CSS for this example */
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+mat-checkbox {
+  margin-right: 8px;
+}
+
+.carousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #eee;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.list {
+  margin-top: 15px;
+}

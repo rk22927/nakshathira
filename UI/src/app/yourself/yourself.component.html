@@ -1,0 +1,99 @@
+<mat-card>
+    <h4>Information About The Nominee </h4>
+    <div class="example-container">
+        <form [formGroup]="nomineeMySelf" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Job Title</mat-label>
+                        <input matInput formControlName="jobTitle">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Company Name</mat-label>
+                        <input matInput formControlName="companyName">
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-icon matSuffix>email</mat-icon>
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-icon matSuffix>phone_enabled</mat-icon>
+                        <mat-label>Phone</mat-label>
+                        <input matInput formControlName="phoneNumber">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Website</mat-label>
+                        <input matInput formControlName="website">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Facebook</mat-label>
+                        <input matInput formControlName="facebook">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>LinkedIn URL</mat-label>
+                        <input matInput formControlName="linkedIn">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Birth Date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="dob">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label></mat-label>
+                <textarea matInput formControlName="reasonForNominee"></textarea>
+                <mat-hint>In 200 words or less, tell the judges why should your nominee be selected for this prestigious
+                    award:</mat-hint>
+            </mat-form-field>
+            <div class="row justify-content-md-center">
+                <div class="col-6">
+                    <button mat-raised-button color="primary" style="margin-top:10px;">
+                        <mat-icon>tick</mat-icon>Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-card>
